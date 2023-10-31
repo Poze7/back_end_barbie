@@ -1,11 +1,11 @@
-export default class SalvaFilme {
-    private repositorio
-    constructor(repositorio) {
+export default class SalvaFilme{
+    private repositorio 
+    constructor(repositorio:any){
         this.repositorio = repositorio
     }
-    public execute(input:Input):Output {
-        const {id,titulo,descricao,imagem} = input
-        return this.repositorio.salvar({id,titulo,descricao,imagem})
+    public execute(input:Input):Output{
+        const {id, titulo,descricao,imagem} = input
+        return this.repositorio.salvar({id, titulo,descricao,imagem})
     }
 }
 
@@ -15,7 +15,6 @@ type Input = {
     descricao:string,
     imagem:string
 }
-
 type Output = {
     id:number,
     titulo:string,
